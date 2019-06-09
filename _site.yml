@@ -1,0 +1,14 @@
+name: "credit risk classification"
+output_dir: "docs"
+navbar:
+  title: "German Credit Risk Report"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Report"
+      href: Report_GermanRisk.html
+output:
+  html_document:
+    theme: cosmo 
+    toc: true
+    toc_float: true
