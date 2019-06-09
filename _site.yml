@@ -1,4 +1,4 @@
-name: "credit risk classification"
+name: "Credit Risk Classification"
 output_dir: "docs"
 navbar:
   title: "German Credit Risk Report"

@@ -4,6 +4,7 @@ author: "Louis Mono"
 ---
 
 ```{r include=FALSE}
+
 # A Prefix nulling hook.
 
 # Make sure to keep the default for normal processing.
