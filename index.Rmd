@@ -1,7 +1,6 @@
 ---
 title: "German credit Risk Analysis"
 author: "Louis Mono"
-
 ---
 
 i created this github page to present the German credit risk report .
@@ -13,8 +12,9 @@ check my repository here : https://github.com/Mono33/GermanCreditRisk
 
 You will find the following files: 
 
-- **GermanCredit_Rcode.R** : Rcode in line with the reports and which generates all accuracy metrics
 
-- **PDFReport_GermanRisk.pdf** : German credit risk report in pdf format ( download it on your pc)
+- *GermanCredit_Rcode.R* : Rcode in line with the reports and which generates all accuracy metrics
 
-- **Report_GermanRisk.Rmd** :   Report in rmd file used to generate this web page
+- *PDFReport_GermanRisk.pdf* :  German credit risk report in pdf format ( download it on your pc)
+
+- *Report_GermanRisk.Rmd* :  Report in rmd file used to generate this web page.
