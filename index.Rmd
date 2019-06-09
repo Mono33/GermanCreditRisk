@@ -12,8 +12,9 @@ check my repository here : https://github.com/Mono33/GermanCreditRisk
 
 You will find the following files: 
 
+
 - *GermanCredit_Rcode.R* : Rcode in line with the reports and which generates all accuracy metrics
-<br>
-- *PDFReport_GermanRisk.pdf* : German credit risk report in pdf format ( download it on your pc)
-<br>
-- *Report_GermanRisk.Rmd* :   Report in rmd file used to generate this web page
+
+- *PDFReport_GermanRisk.pdf* :  German credit risk report in pdf format ( download it on your pc)
+
+- *Report_GermanRisk.Rmd* :  Report in rmd file used to generate this web page.
