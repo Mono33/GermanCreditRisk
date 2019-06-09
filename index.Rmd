@@ -3,7 +3,7 @@ title: "German credit Risk Analysis"
 author: "Louis Mono"
 ---
 
-i created this github page to present the German credit risk report .
+I created this github page to present the German credit risk report .
 
 This study aims at adressing a classification problem by using the the applicant demographic and socio-economic profiles of german credit data to examine the risk of lending loan to the customer. I assessed the performance of different Machine learning algorithms (Logistic regression model , Decision tree, random forests, Support vector machines ,neural networks, Lasso ) in terms of overall accuracy. For the model optimization, i conducted a comparative assessment of different models combining the effects of Gini, KS, F1-score, balanced accuracy and the area under the ROC curve (AUC) values.
 
