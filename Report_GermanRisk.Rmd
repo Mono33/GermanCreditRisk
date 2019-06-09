@@ -1,6 +1,5 @@
 ---
 title: "Capstone2: German credit Risk"
-author: "Louis Mono"
 ---
 
 ```{r include=FALSE}
