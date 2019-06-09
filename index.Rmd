@@ -4,13 +4,17 @@ author: "Louis Mono"
 
 ---
 
-i created this github page to present the German credit risk report (html format) .
+i created this github page to present the German credit risk report .
 
-This study aims at adressing a classification problem by using the the applicant’s demographic and socio-economic profiles of german credit data to examine the risk of lending loan to the customer. I assessed the performance of different Machine learning algorithms (Logistic regression model , Decision tree, random forests, Support vector machines ,neural networks, Lasso ) in terms of overall accuracy. For the model optimization, i conducted a comparative assessment of different models combining the effects of Gini, KS, F1-score, balanced accuracy and the area under the ROC curve (AUC) values.
+This study aims at adressing a classification problem by using the the applicant demographic and socio-economic profiles of german credit data to examine the risk of lending loan to the customer. I assessed the performance of different Machine learning algorithms (Logistic regression model , Decision tree, random forests, Support vector machines ,neural networks, Lasso ) in terms of overall accuracy. For the model optimization, i conducted a comparative assessment of different models combining the effects of Gini, KS, F1-score, balanced accuracy and the area under the ROC curve (AUC) values.
 
 check my repository here : https://github.com/Mono33/GermanCreditRisk
 
+
 You will find the following files: 
-*GermanCredit_Rcode_Rcode : Rcode in line with the reports and that generates all accuracy metrics
-*PDFReport_GermanRisk.pdf : German credit risk report in pdf format ( download it on your pc)
-*Report_GermanRisk.Rmd  :   Report in rmd file used to generate this web page
+
+- **GermanCredit_Rcode.R** : Rcode in line with the reports and which generates all accuracy metrics
+
+- **PDFReport_GermanRisk.pdf** : German credit risk report in pdf format ( download it on your pc)
+
+- **Report_GermanRisk.Rmd** :   Report in rmd file used to generate this web page
