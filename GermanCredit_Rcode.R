@@ -8,14 +8,14 @@
 
 #In my repository, except this GermanCredit_Rcode, you have the following files: 
 #- PDFReport_GermanRisk.pdf : German credit risk report in pdf format ( download it on your pc)
-#- Report in rmd format here: https://mono33.github.io/GermanCreditRisk/Report_GermanRisk.html ( Report_GermanRisk.Rmd is the rmd file that generated it )
+#- Report in rmd format here: https://beta.rstudioconnect.com/content/5328/Report_GermanRisk.html ( Report_GermanRisk.Rmd is the rmd file that generated it )
 
 #but you also find:
 #- PDFReport_GermanRisk.Rmd : .Rmd file that generates my report in PDF format
 #- all the *.PNG files that i used in the Methods and Analysis section 
 #- Install-doSNOW-parallel-DeLuxe.R , performed by  Tobias Kind (2015) To resolve the summary.connection(connection) : invalid connection
 
-##I.---------------------------------Section I: Introduction ---------------------------------------------------------------
+##I.---------------------------------Section I: Introduction ---------------------------------------------------------------------------------------
 
 #text on pdf and .rmd reports
 
