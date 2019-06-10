@@ -826,7 +826,7 @@ An artificial neural network (ANN) or neural net is a graph of connected units r
 
 The artificial neuron, as illustrated in Figure x, is a computational engine that transforms a set of inputs $x =(x_1,x_2, ...,x_d)$ into a single output $o$ using a composition of two functions as follows:
 
-* A **net value function** $\xi$, which utilizes the unit’s parameters or weights $w$ to summarize input data into a net value, $\upsilon$, as $ν$ = $\xi (x,w)$ . The net value function mimics the behavior of a biological neuron as it aggregates signals from linked neurons into an internal representation. Typically, it takes the form of a *weighted sum*, a *distance*, or a *kernel*.
+* A **net value function** $\xi$, which utilizes the unit’s parameters or weights $w$ to summarize input data into a net value, $\upsilon$, as $\upsilon$ = $\xi (x,w)$ . The net value function mimics the behavior of a biological neuron as it aggregates signals from linked neurons into an internal representation. Typically, it takes the form of a *weighted sum*, a *distance*, or a *kernel*.
  
 * An **activation function**, or squashing function, $\varphi$, that transforms net value into the unit’s output value $o$ as $o = \varphi(\upsilon)$. The activation function simulates the behaviour of a biological neuron as it decides to fire or inhibit signals, depending on its internal logic. The output value is then dispatched to all receiving units as determined by the underlying topology. Various activations have been proposed.The most widely-used ones include the linear function, the step or threshold function, and the sigmoid and hyperbolic tangent function.
 
