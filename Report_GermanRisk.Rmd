@@ -1,10 +1,20 @@
 ---
 title: "Capstone2: German credit Risk"
 author: "Louis Mono"
+date:  "May, 2019"
+output:
+  html_document:
+    theme: journal
+    highlight: espresso
+    bibliography: bibliography.bib
+    csl: biomed-central.csl
+    code_folding: show
+    toc: true
+    toc_float: true
+    
 ---
 
 ```{r include=FALSE}
-
 # A Prefix nulling hook.
 
 # Make sure to keep the default for normal processing.
@@ -734,14 +744,14 @@ glimpse(german.copy)
 
 > **3.1.3. `Skewness`**
 
-Skewness is defined to be the [third standardized central moment](https://en.wikipedia.org/wiki/Standardized_moment) .You can easily tell if a distribution is skewed by simple visualization. There are different ways may help to remove skewness such as log, square root or inverse. However it is often difficult to determine from plots which transformation is most appropriate for correcting skewness. The Box-Cox procedure automatically identified a transformation from the family of power transformations that are indexed by a parameter $\lambda$.
+Skewness is defined to be the [third standardized central moment](https://en.wikipedia.org/wiki/Standardized_moment) .You can easily tell if a distribution is skewed by simple visualization. There are different ways may help to remove skewness such as log, square root or inverse. However it is often difficult to determine from plots which transformation is most appropriate for correcting skewness. The Box-Cox procedure automatically identified a transformation from the family of power transformations that are indexed by a parameter $λ$.
 
-This family includes: 
+This family includes:
    
-* log transformation $(\lambda=0)$
-* square transformation $(\lambda=2)$
-* square root $(\lambda=0.5)$
-* inverse $(\lambda= -1)$
+* log transformation $(λ=0)$
+* square transformation $(λ=2)$
+* square root $(λ=0.5)$
+* inverse $(λ=−1)$
 
 We used preProcess() function in caret to apply this transformation by changing the method argument to **BoxCox**.
 
@@ -1132,10 +1142,10 @@ The goal of logistic regression is to directly estimate the distribution P(Y|X) 
 is called the logistic function or the sigmoid function, and $θ^TX = θ_0 + \sum_{i=1}^{d} θiXi$. As the sum of the probabilities must equal 1, p(Y = 0|X) can be estimated using the following equation $$p(Y = 0|X) = 1−g(θ^TX) = \frac{e−θ^TX}{\ 1 + e−θ^TX}. \tag{2}$$
 
 Because logistic regression predicts probabilities, rather than just classes, we can fit it using likelihood. For each training data point, we have a vector of features,
-$X =(X_0,X_1,...,X_d) (X_0 = 1)$, and an observed class, $Y = y_k$. The probability of that class was either $g(θ^TX)$ if $yk = 1$, or $ 1 − g(θ^TX)$ if $y_k = 0$ . Note that we can combine both Equation (1) and Equation (2) as a more compact form 
+$X =(X_0,X_1,...,X_d) (X_0 = 1)$*, and an observed class, $Y = y_k$. The probability of that class was either $g(θ^TX)$ if $yk = 1$, or $1−g(θ^TX)$ if $y_k = 0$ . Note that we can combine both Equation (1) and Equation (2) as a more compact form 
 $$ \begin{aligned}
-p(Y = y_k|X;θ) &= (p(Y = 1|X)) ^{y_k}  (p(Y = 0|X))^{ 1 − y_k} \\
-              &= g(θ^TX)^{y_k} ( 1 − g(θTX))^{ 1 − y_k}
+p(Y = y_k|X;θ) &= (p(Y = 1|X)) ^{y_k}  (p(Y = 0|X))^{1−y_k} \\
+              &= g(θ^TX)^{y_k} (1−g(θTX))^{1−y_k}
 \end{aligned}$$
 
 Assuming that the N training examples were generated independently, the likelihood of the parameters can be written as
@@ -1156,10 +1166,10 @@ In our study, using the **glm()** function  of the stats package, we fit our log
 
 > **4.1.2. `Decision trees`**
 
-Decision trees create a hierarchical partitioning of the data, which relates the different partitions at the leaf level to the different classes. The hierarchical partitioning at each level is created with the use of a split criterion. The split criterion may either use a condition (or predicate) on a single attribute, or it may contain a condition on multiple attributes. The former is referred to as a univariate split, whereas the latter is referred to as a multivariate split. The overall approach is to try to recursively split the training data so as to maximize the discrimination among the different classes over different nodes. The discrimination among the different classes is maximized, when the level of skew among the different classes in a given node is maximized. A measure such as the gini-index or entropy is used in order to quantify this skew. For example, if $p_1 . . . p_k$ is the fraction of the records belonging to the $k$ different classes in a node $N$, then the gini-index $G(N)$ of the node $N$ is defined as follows: $$G(N) = 1 − \sum_{i=1}^k =p^2_i \tag{4}$$
+Decision trees create a hierarchical partitioning of the data, which relates the different partitions at the leaf level to the different classes. The hierarchical partitioning at each level is created with the use of a split criterion. The split criterion may either use a condition (or predicate) on a single attribute, or it may contain a condition on multiple attributes. The former is referred to as a univariate split, whereas the latter is referred to as a multivariate split. The overall approach is to try to recursively split the training data so as to maximize the discrimination among the different classes over different nodes. The discrimination among the different classes is maximized, when the level of skew among the different classes in a given node is maximized. A measure such as the gini-index or entropy is used in order to quantify this skew. For example, if $p_1 . . . p_k$ is the fraction of the records belonging to the $k$ different classes in a node $N$, then the gini-index $G(N)$ of the node $N$ is defined as follows: $$G(N) = 1− \sum_{i=1}^k =p^2_i \tag{4}$$
 
 
-The value of $G(N)$ lies between $0$ and $1−1/k$. The smaller the value of G(N), the greater the skew. In the cases where the classes are evenly balanced, the value is $1−1/k$ . An alternative measure is the entropy $E(N)$: $$E(N) = - \sum_{i=1}^k pi * log(pi) \tag{5}$$
+The value of $G(N)$ lies between $0$ and $1−1/k$. The smaller the value of G(N), the greater the skew. In the cases where the classes are evenly balanced, the value is $1−1/k$ . An alternative measure is the entropy $E(N)$: $$E(N) = - \sum_{i=1}^k pi · log(pi) \tag{5}$$
 
 The value of the entropy lies between $0$ and $log(k)$. The value is $log(k)$, when the records are perfectly balanced among the different classes. This corresponds to the scenario with maximum entropy. The smaller the entropy, the greater the skew in the data. Thus, the gini-index and entropy provide an effective way to evaluate the quality of a node in terms of its level of discrimination between the different classes.
 
@@ -1210,11 +1220,11 @@ knitr::include_graphics("svmfig.PNG")
 
 An artificial neural network (ANN) or neural net is a graph of connected units representing a mathematical model of biological neurons. Those units are sometimes referred to as processing units, nodes, or simply neurons. The units are connected through unidirectional or bidirectional arcs with weights representing the strength of the connections between units. This is inspired from the biological model in which the connection weights represent the strength of the synapses between the neurons, inhibiting or facilitating the passage of signals.
 
-The artificial neuron, as illustrated in Figure x, is a computational engine that transforms a set of inputs $x =(x_1,x_2, ...,x_d)$ into a single output $o$ using a composition of two functions as follows:
+The artificial neuron, as illustrated in Figure x, is a computational engine that transforms a set of inputs $x = (x_1, · · · ,x_d)$ into a single output $o$ using a composition of two functions as follows: 
 
-* A **net value function** $\xi$, which utilizes the unit’s parameters or weights $w$ to summarize input data into a net value, $\upsilon$, as $ν$ = $\xi (x,w)$ . The net value function mimics the behavior of a biological neuron as it aggregates signals from linked neurons into an internal representation. Typically, it takes the form of a *weighted sum*, a *distance*, or a *kernel*.
+* A **net value function** $ξ$, which utilizes the unit’s parameters or weights $w$ to summarize input data into a net value, $ν$, as $ν = ξ(x,w)$ . The net value function mimics the behavior of a biological neuron as it aggregates signals from linked neurons into an internal representation. Typically, it takes the form of a *weighted sum*, a *distance*, or a *kernel*.
  
-* An **activation function**, or squashing function, $\varphi$, that transforms net value into the unit’s output value $o$ as $o = \varphi(\upsilon)$. The activation function simulates the behaviour of a biological neuron as it decides to fire or inhibit signals, depending on its internal logic. The output value is then dispatched to all receiving units as determined by the underlying topology. Various activations have been proposed.The most widely-used ones include the linear function, the step or threshold function, and the sigmoid and hyperbolic tangent function.
+* An **activation function**, or squashing function, $φ$, that transforms net value into the unit’s output value $o$ as $o = φ(ν)$. The activation function simulates the behaviour of a biological neuron as it decides to fire or inhibit signals, depending on its internal logic. The output value is then dispatched to all receiving units as determined by the underlying topology. Various activations have been proposed.The most widely-used ones include the linear function, the step or threshold function, and the sigmoid and hyperbolic tangent function.
 
 
 ```{r , echo=FALSE, fig.cap="Mathematical model of an ANN unit", fig.align = 'center', out.width = '70%'}
